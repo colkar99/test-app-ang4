@@ -1,5 +1,5 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<!-- <div style="text-align:center">
   <h1>
     Welcome to {{ title }}!
   </h1>
@@ -17,5 +17,15 @@
     <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
   </li>
 </ul>
-<h1>{{name}}</h1>
+<h1>{{name}}</h1> -->
+<h1>Total Employess {{this.employees.length}}</h1>
+<h1>Total Employess {{averageAge()}}</h1>
+<p>{{emplength}}</p>
+<li *ngFor='let employee of employees'>
+  <h2>name: {{employee.name}}</h2>
+  <h3>Date of birth: {{employee.dob}}</h3>
+  <h4 *ngIf="employee.age <= 25">age: {{employee.age}}</h4>
+  <h4 *ngIf="employee.age > 25"> old person</h4>
+  <h4>place: {{employee.place}}</h4>
+</li>
 
